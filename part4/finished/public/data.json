@@ -1,0 +1,54 @@
+{
+    "chats": [
+        {
+            "name": "Charlie",
+            "pic": "img/tony.JPG",
+            "lastMessage": "Your suit looks so great!",
+            "from": true,
+            "unread": false,
+            "messages": [
+                {
+                    "message": "wow"
+                },
+                {
+                    "message": "nice"
+                }
+            ]
+        },
+        {
+            "name": "Kevin",
+            "pic": "img/legolas.JPG",
+            "lastMessage": "Thanks dude!",
+            "from": false,
+            "unread": true,
+            "messages": [
+                {
+                    "message": "yo"
+                },
+                {
+                    "message": "cool"
+                }
+            ]
+        },
+        {
+            "name": "Emma",
+            "pic": "img/widow.jfif",
+            "lastMessage": "Wow that's really impresssive!",
+            "from": false,
+            "unread": true,
+            "messages": []
+        },
+        {
+            "name": "Naruto",
+            "pic": "img/naruto.JPG",
+            "lastMessage": "You look great!",
+            "from": true,
+            "unread": false,
+            "messages": [
+                {
+                    "message": "yee"
+                }
+            ]
+        }
+    ]
+}
