@@ -1,0 +1,79 @@
+{
+    "profiles": [
+        {
+            "name": "Jane",
+            "age": 26,
+            "profession": "Cosplayer",
+            "bio": "I love the Mandalorian and Baby Yoda is so cute!",
+            "pic": "img/mando.jpg"
+        },
+        {
+            "name": "Kevin",
+            "age": 22,
+            "profession": "Software engineer",
+            "bio": "I love LOTR and Legolas is my fav character",
+            "pic": "img/legolas.JPG"
+        },
+        {
+            "name": "Charlie",
+            "age": 22,
+            "profession": "Professional Table Tennis player",
+            "bio": "On the side I pretend I'm Iron Man",
+            "pic": "img/tony.JPG"
+        }
+    ],
+    "chats": [
+        {
+            "name": "Charlie",
+            "pic": "img/tony.JPG",
+            "lastMessage": "Your suit looks so great!",
+            "messages": [
+                {
+                    "content": "Your suit looks so great!",
+                    "sender": false
+                }
+            ],
+            "from": true,
+            "unread": false
+        },
+        {
+            "name": "Kevin",
+            "pic": "img/legolas.JPG",
+            "messages": [
+                {
+                    "content": "Thanks!",
+                    "sender": true
+                }
+            ],
+            "from": false,
+            "unread": true
+        },
+        {
+            "name": "Emma",
+            "pic": "img/widow.jfif",
+            "messages": [
+                {
+                    "content": "What's good!",
+                    "sender": true
+                },
+                {
+                    "content": "Hey thanks for reaching out!",
+                    "sender": false
+                }
+            ],
+            "unread": true
+        },
+        {
+            "name": "Naruto",
+            "pic": "img/naruto.JPG",
+            "messages": [
+                {
+                    "content": "Hey man!",
+                    "sender": true
+                }
+            ],
+            "from": true,
+            "unread": false
+        }
+    ]
+}
