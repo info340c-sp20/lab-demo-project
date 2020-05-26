@@ -12,15 +12,18 @@ export default class SingleChat extends Component {
     }
 
     onHandleChange = (event) => {
-        // handle change!
+        let name = event.target.name;
+        let value = event.target.value;
+        this.setState({
+            [name]: value
+        });
     }
 
     sendMessage = (e) => {
         e.preventDefault();
         let input = this.state.input;
         if (input) {
-            // update messages!
-            
+            this.props.updateChatMessages(this.props.index, input)
             this.setState({
                 input: ""
             })
@@ -43,9 +46,9 @@ export default class SingleChat extends Component {
         });
         return (
             <div>
-                <Button color="primary" onClick={() => console.log("reset chat")}>Back</Button>
+                <Button color="primary" onClick={this.props.resetChat}>Back</Button>
                 <div>
-                    <h1 className="mt-2">{name}</h1>
+                    <h1>{name}</h1>
                     <div className="box">
                         <ul className="message-box">
                             {renderedMessages}
