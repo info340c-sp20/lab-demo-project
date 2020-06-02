@@ -26,51 +26,28 @@
         {
             "name": "Charlie",
             "pic": "img/tony.JPG",
-            "messages": [
-                {
-                    "content": "Your suit looks so great!",
-                    "sender": false
-                }
-            ],
+            "lastMessage": "Your suit looks so great!",
             "from": true,
             "unread": false
         },
         {
             "name": "Kevin",
             "pic": "img/legolas.JPG",
-            "messages": [
-                {
-                    "content": "Thanks!",
-                    "sender": true
-                }
-            ],
+            "lastMessage": "Thanks dude!",
             "from": false,
             "unread": true
         },
         {
             "name": "Emma",
             "pic": "img/widow.jfif",
-            "messages": [
-                {
-                    "content": "What's good!",
-                    "sender": true
-                },
-                {
-                    "content": "Hey thanks for reaching out!",
-                    "sender": false
-                }
-            ],
+            "lastMessage": "Wow that's really impresssive!",
+            "from": false,
             "unread": true
         },
         {
             "name": "Naruto",
             "pic": "img/naruto.JPG",
-            "messages": [
-                {
-                    "content": "Hey man!",
-                    "sender": true
-                }
-            ],
+            "lastMessage": "You look great!",
             "from": true,
             "unread": false
         }

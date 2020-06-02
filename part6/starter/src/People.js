@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
+import firebase from 'firebase';
 
 class People extends Component {
 
@@ -8,24 +9,23 @@ class People extends Component {
     }
 
     next = (choose) => {
-        // move to next person!
+        let selectedIndex = this.state.selectedIndex;
+        let people = this.props.people;
+        let selectedPerson = people[selectedIndex];
         if (choose) {
-            let selectedIndex = this.state.selectedIndex;
-            let people = this.props.people;
-            let selectedPerson = people[selectedIndex];
-            // new person object
             let person = {
                 name: selectedPerson.name,
                 pic: selectedPerson.pic,
                 unread: false,
                 messages: []
             };
-            this.props.addCallback(person);
-            // update people using props
-
+            // push to firebase
         }
-        this.setState({
-            selectedIndex: this.state.selectedIndex + 1
+        this.setState((currState) => {
+            return {
+                ...currState,
+                selectedIndex: currState.selectedIndex + 1
+            };
         });
     }
 

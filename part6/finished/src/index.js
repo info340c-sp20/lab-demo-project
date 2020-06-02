@@ -3,8 +3,18 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import firebase from 'firebase/app';
+import 'firebase/database';
+import 'firebase/auth';
 
-ReactDOM.render(<App prop1={1} greeting="hi" greeting2="hi" />, document.getElementById('root'));
+const firebaseConfig = {
+    // your creds
+};
+
+firebase.initializeApp(firebaseConfig);
+
+
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

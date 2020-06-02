@@ -6,7 +6,7 @@ export default class Chats extends Component {
     constructor() {
         super();
         this.state = {
-            showChatList: true,
+            showChats: true,
             selectedChat: null
         }
     }
@@ -14,26 +14,26 @@ export default class Chats extends Component {
     selectChat = (index) => {
         this.setState({
             selectedChat: index,
-            showChatList: false
+            showChats: false
         })
-        // set selected chat
     }
 
     resetChat = () => {
-        // reset chat
         this.setState({
             selectedChat: null,
-            showChatList: true
+            showChats: true
         })
     }
 
     render() {
         let chats = this.props.chats;
         let renderedChats = chats.map((chat, i) => {
-            let lastMessageIndex = chat.messages.length - 1;
-            let lastMessage = chat.messages[lastMessageIndex] || { content: "", sender: false };
+            let lastMessage = { content: "", sender: false };
+            if (chat.messages) {
+                let lastMessageIndex = chat.messages.length - 1;
+                lastMessage = chat.messages[lastMessageIndex] || { content: "", sender: false }
+            }
             let { content, sender } = lastMessage;
-            // object destructuring
             return (
                 <li key={chat.name + " " + i} className="chat list-group-item" onClick={() => this.selectChat(i)}>
                     <div><img className="chat-pic" src={chat.pic} alt={chat.name} /></div>
@@ -46,7 +46,7 @@ export default class Chats extends Component {
         });
         return (
             <div>
-                {this.state.showChatList ?
+                {this.state.showChats ?
                     <div>
                         <h1>Chats</h1>
                         <div className="box">
@@ -56,7 +56,7 @@ export default class Chats extends Component {
                         </div>
                     </div>
                     :
-                    <SingleChat updateChatMessages={this.props.updateChatMessages} resetChat={this.resetChat} index={this.state.selectedChat} selectedChat={this.props.chats[this.state.selectedChat]} />
+                    <SingleChat resetChat={this.resetChat} updateChatMessages={this.props.updateChatMessages} index={this.state.selectedChat} selectedChat={this.props.chats[this.state.selectedChat]} />
                 }
             </div>
         );

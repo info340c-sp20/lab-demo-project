@@ -51,7 +51,6 @@ export default class Main extends Component {
 
     render() {
         let content;
-
         if (this.props.page === "people") {
             content = <People people={this.state.people} pageCallback={this.props.pageCallback} addCallback={this.addPersonToChat} />
         } else if (this.props.page === "chats") {

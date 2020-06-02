@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Charlie",
+        "pic": "img/tony.JPG",
+        "messages": [
+            {
+                "content": "Your suit looks so great!",
+                "sender": false
+            }
+        ],
+        "from": true,
+        "unread": false
+    },
+    {
+        "name": "Kevin",
+        "pic": "img/legolas.JPG",
+        "messages": [
+            {
+                "content": "Thanks!",
+                "sender": true
+            }
+        ],
+        "from": false,
+        "unread": true
+    },
+    {
+        "name": "Emma",
+        "pic": "img/widow.jfif",
+        "messages": [
+            {
+                "content": "What's good!",
+                "sender": true
+            },
+            {
+                "content": "Hey thanks for reaching out!",
+                "sender": false
+            }
+        ],
+        "unread": true
+    },
+    {
+        "name": "Naruto",
+        "pic": "img/naruto.JPG",
+        "messages": [
+            {
+                "content": "Hey man!",
+                "sender": true
+            }
+        ],
+        "from": true,
+        "unread": false
+    }
+]
